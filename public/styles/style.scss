@@ -1,0 +1,128 @@
+@import "./loli/variables";
+@import "./loli/mixins";
+
+$html-bg: #e8e8e8;
+$html-fg: #1a1414;
+$content-bg:#2f2f51;
+$content-fg: #e8e8e8;
+$input-bg:#2f2f51;
+$input-fg: #e8e8e8;
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+html{
+  background-color: $html-bg;
+  color: $html-fg;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: $input-bg;
+  color: $input-fg;
+  padding: 0.4rem 1rem;
+}
+#content{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin-left: auto;
+  margin: auto;
+}
+#current-room{
+  padding-top: 1rem;
+  flex-shrink: 0;
+  h3{
+    height: 2rem;
+    font-size: 1.3rem;
+    background-color: $input-bg;
+    color: $white;
+    border-radius: 0.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.4rem;
+    width: 10rem;
+  }
+}
+#room{
+  flex: 1;
+  display: flex;
+  #messages{
+    flex: 1;
+    background-color: $content-bg;
+    color: $content-fg;
+    overflow-y: auto;
+    @include border-radius-left(0.4rem);
+    padding: 0.5rem;
+    .sys-words{
+      font-size: 0.8em;
+      color: #e5cce2;
+      font-style: normal;
+      &::before{
+        content: "系统:";
+        color: #c1d72d;
+      }
+      .sys-em{
+        color: #f6b878;
+      }
+    }
+  }
+  #room-list{
+    overflow-y: auto;
+    background-color: #549289;
+    width: 4rem;
+    @include border-radius-right(0.4rem);
+    div{
+      margin: 0;
+      padding: 0.3em;
+      color: #bdd2c9;
+      border-bottom: $white solid 1px;
+    }
+  }
+}
+#send-form{
+  display: flex;
+  margin-top: 1rem;
+  #send-message{
+    flex: 1;
+  }
+  #send-button{
+    width: 4rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: #315d6a;
+  }
+}
+
+#help{
+  font-size: 0.8rem;
+  position: relative;
+  margin-top: 0.3rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  p{
+    margin-bottom: 0.3rem;
+  }
+  ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: circle;
+    padding-left: 0.5rem;
+  }
+}
+
+@include forSmallScreen($size-xs){
+  #content{
+    width: 90% !important;
+  }
+  #room-list{
+    width: 1.6em !important;
+  }
+  #send-form{
+    flex-direction: column;
+    *{width: 100% !important;}
+  }
+  #help{
+    margin: 0.5rem 0 !important;
+  }
+}

@@ -1,0 +1,56 @@
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+  font-size: $html-font-size;
+  color: $html-font-color;
+  line-height: $html-line-height;
+  font-family: Consolas;
+  margin: 0;
+}
+body{
+  margin: 0;
+}
+@for $i from 1 through 6{
+  h#{$i}{
+    font-weight: 500;
+    font-size: 1.8 - 0.2 * ($i - 1) + rem;
+    line-height: 1.2;
+    margin-top: $unit-2;
+    margin-bottom: $unit-4;
+  }
+}
+img{
+  max-width: 100%;
+}
+p{
+  margin: 0.5rem 0;
+}
+a{
+  font-size: inherit;
+  text-decoration: none;
+  color: $link-color;
+  &:visited{
+    color: $link-color-visited;
+  }
+  &:hover,
+  &:active{
+    color: $link-color-hover;
+    text-decoration: initial;
+  }
+}
+input{
+  font-size: inherit;
+  font-family: inherit;
+}
+ul{
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+}
+[hidden]{
+  display: none;
+}
+code{
+  font-family: Consolas;
+}

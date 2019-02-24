@@ -1,0 +1,31 @@
+@mixin forSmallScreen($media) {
+  @media (max-width: $media){
+    @content;
+  }
+}
+// 指定单侧圆角的方向
+@mixin border-radius($radius: $border-radius){
+  border-radius: $radius;
+}
+@mixin border-radius-top($radius: $border-radius){
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-radius-right($radius: $border-radius){
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+@mixin border-radius-bottom($radius: $border-radius){
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-radius-left($radius: $border-radius){
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+// 位置
+@mixin block-xcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

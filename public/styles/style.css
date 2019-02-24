@@ -1,0 +1,110 @@
+@charset "UTF-8";
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html {
+  background-color: #e8e8e8;
+  color: #1a1414; }
+
+input {
+  outline: none;
+  border: none;
+  background-color: #2f2f51;
+  color: #e8e8e8;
+  padding: 0.4rem 1rem; }
+
+#content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin-left: auto;
+  margin: auto; }
+
+#current-room {
+  padding-top: 1rem;
+  flex-shrink: 0; }
+  #current-room h3 {
+    height: 2rem;
+    font-size: 1.3rem;
+    background-color: #2f2f51;
+    color: #fefefe;
+    border-radius: 0.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.4rem;
+    width: 10rem; }
+
+#room {
+  flex: 1;
+  display: flex; }
+  #room #messages {
+    flex: 1;
+    background-color: #2f2f51;
+    color: #e8e8e8;
+    overflow-y: auto;
+    border-bottom-left-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    padding: 0.5rem; }
+    #room #messages .sys-words {
+      font-size: 0.8em;
+      color: #e5cce2;
+      font-style: normal; }
+      #room #messages .sys-words::before {
+        content: "系统:";
+        color: #c1d72d; }
+      #room #messages .sys-words .sys-em {
+        color: #f6b878; }
+  #room #room-list {
+    overflow-y: auto;
+    background-color: #549289;
+    width: 4rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem; }
+    #room #room-list div {
+      margin: 0;
+      padding: 0.3em;
+      color: #bdd2c9;
+      border-bottom: #fefefe solid 1px; }
+
+#send-form {
+  display: flex;
+  margin-top: 1rem; }
+  #send-form #send-message {
+    flex: 1; }
+  #send-form #send-button {
+    width: 4rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: #315d6a; }
+
+#help {
+  font-size: 0.8rem;
+  position: relative;
+  margin-top: 0.3rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem; }
+  #help p {
+    margin-bottom: 0.3rem; }
+  #help ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: circle;
+    padding-left: 0.5rem; }
+
+@media (max-width: 480px) {
+  #content {
+    width: 90% !important; }
+
+  #room-list {
+    width: 1.6em !important; }
+
+  #send-form {
+    flex-direction: column; }
+    #send-form * {
+      width: 100% !important; }
+
+  #help {
+    margin: 0.5rem 0 !important; } }
+
+/*# sourceMappingURL=style.css.map */

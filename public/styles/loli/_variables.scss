@@ -1,0 +1,81 @@
+// 几种常见的颜色，根据色轮取值
+$red:     #e24a6e !default;
+$orange:  #fe6856 !default;
+$yellow:  #fee39c !default;
+$green:   #67bd8d !default;
+$cyan:    #00a396 !default;
+$blue:    #018798 !default;
+$purple:  #8A4ED7 !default;
+$black:   #101b27 !default;
+$white:   #fefefe !default;
+
+$colors: (
+  red:    $red,
+  orange: $orange,
+  yellow: $yellow,
+  green:  $green,
+  cyan:   $cyan,
+  blue:   $blue,
+  purple: $purple,
+  black:  $black,
+  white:  $white
+);
+// 标准尺寸
+$unit-o: .05rem !default;
+$unit-h: .1rem !default;
+$unit-1: .2rem !default;
+$unit-2: .4rem !default;
+$unit-3: .6rem !default;
+$unit-4: .8rem !default;
+$unit-5: 1rem !default;
+$unit-6: 1.2rem !default;
+$unit-7: 1.4rem !default;
+$unit-8: 1.6rem !default;
+$unit-9: 1.8rem !default;
+$unit-10: 2rem !default;
+$unit-12: 2.4rem !default;
+$unit-16: 3.2rem !default;
+// 自适应布局
+$size-xs: 480px !default;
+$size-sm: 600px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1280px !default;
+$responsive-size:(
+  xs:$size-xs,
+  sm:$size-sm,
+  md:$size-md,
+  lg:$size-lg,
+  xl:$size-xl
+);
+//z-index，保证不混乱
+$zindex-0: 1 !default;
+$zindex-1: 10 !default;
+$zindex-2: 20 !default;
+$zindex-3: 30 !default;
+$zindex-4: 40 !default;
+// 最小宽度，避免元素太窄
+$control-width-xs: 180px !default;
+$control-width-sm: 320px !default;
+$control-width-md: 640px !default;
+$control-width-lg: 960px !default;
+$control-width-xl: 1280px !default;
+//常见空隙
+$off-canvas-breakpoint: $size-lg;
+$layout-spacing: $unit-2;
+$layout-spacing-sm: $unit-1;
+$layout-spacing-lg: $unit-3;
+// html默认
+$html-font-size: 18px;
+$html-font-color: #2f2732;
+$html-line-height: 1.5;
+$bg-color: #fefefe;
+$font-size-sm: 0.7rem;
+$font-size-lg: 1.2rem;
+// 默认其它
+$link-color: $blue;
+$link-color-hover: $cyan;
+$link-color-visited: $purple;
+
+$border-width: $unit-o;
+$border-radius: $unit-1;
